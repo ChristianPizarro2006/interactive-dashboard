@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Productivity Dashboard</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -13,6 +16,7 @@
 
     <div class="row">
 
+        <!-- Weekly Task Goal Calculator -->
         <div class="col" id="weekly-tasks">
 
             <h2>Weekly Task Goal Calculator</h2>
@@ -28,17 +32,90 @@
                 <label for="bonus-tasks">Weekly Bonus Tasks:</label>
                 <input type="number" id="bonus-tasks">
 
-                <button id="goal-btn">Calculate Goal</button>
+                <button type="button" id="goal-btn">
+                    Calculate Goal
+                </button>
 
             </form>
 
             <p id="goal-message"></p>
 
-            <script src="js/task-manager.js"></script>
+        </div>
+
+
+        <!-- Imperial/Metric Converter -->
+        <div class="col" id="metric-converter">
+
+            <h2>Imperial/Metric Converter</h2>
+
+            <form id="converter-form">
+
+                <label for="input-value">Value:</label>
+                <input
+                    type="number"
+                    id="input-value"
+                    step="any"
+                >
+
+                <label for="conversion-type">
+                    Conversion Type:
+                </label>
+
+                <select
+                    id="conversion-type"
+                    name="conversion-type"
+                >
+
+                    <option value="inch to centimeter">
+                        Inch to Centimeter
+                    </option>
+
+                    <option value="foot to centimeter">
+                        Foot to Centimeter
+                    </option>
+
+                    <option value="yard to meter">
+                        Yard to Meter
+                    </option>
+
+                    <option value="mile to kilometer">
+                        Mile to Kilometer
+                    </option>
+
+                    <option value="centimeter to inch">
+                        Centimeter to Inch
+                    </option>
+
+                    <option value="centimeter to foot">
+                        Centimeter to Foot
+                    </option>
+
+                    <option value="meter to yard">
+                        Meter to Yard
+                    </option>
+
+                    <option value="kilometer to mile">
+                        Kilometer to Mile
+                    </option>
+
+                </select>
+
+                <button type="button" id="convert-btn">
+                    Convert
+                </button>
+
+            </form>
+
+            <!-- Conversion results appear here -->
+            <div id="conversion-result"></div>
 
         </div>
 
     </div>
+
+    <!-- External JavaScript Files -->
+    <script src="js/task-manager.js"></script>
+    <script src="js/metric-converter.js"></script>
 
 </body>
 
