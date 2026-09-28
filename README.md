@@ -8,6 +8,7 @@ This project is a web-based dashboard built for WEB-115 to demonstrate interacti
 - [ ] Integrate a task list with array storage.
 - [ ] Add JavaScript logic for a live clock.
 - [x] Add a weekly task goal calculator.
+- [x] Add a Magic Eight Ball game.
 
 ## Weekly Task Goals
 
@@ -61,3 +62,17 @@ BEGIN
     END IF
 
 END
+
+## Magic Eight Ball
+
+The Magic Eight Ball allows users to enter a yes/no question and click the Eight Ball to receive a randomly generated answer.
+
+### Features
+
+- Accepts a yes/no question from the user.
+- Generates a random response from an array of possible answers.
+- Uses JavaScript event listeners to respond when the Eight Ball is clicked.
+- Uses `Math.random()` and `Math.floor()` to select a random answer.
+- Displays the randomly selected answer on the Eight Ball.
+- Includes a reset button that allows the user to ask another question.
+- Uses CSS animation to create a shaking effect when the Eight Ball is clicked.

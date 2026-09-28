@@ -6,112 +6,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Productivity Dashboard</title>
 
-    <!-- Link to external CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <h1>Interactive Productivity Dashboard</h1>
+    <header>
+        <h1>Interactive Productivity Dashboard</h1>
+        <p>Stay productive, track your goals, and use helpful tools.</p>
+    </header>
 
-    <div class="row">
+    <main>
 
-        <!-- Weekly Task Goal Calculator -->
-        <div class="col" id="weekly-tasks">
-
-            <h2>Weekly Task Goal Calculator</h2>
+        <!-- Weekly Goal Section -->
+        <section>
+            <h2>Weekly Goal</h2>
 
             <form id="goal-form">
-
-                <label for="user-name">Name:</label>
-                <input type="text" id="user-name">
-
-                <label for="daily-goal">Daily Task Goal:</label>
-                <input type="number" id="daily-goal">
-
-                <label for="bonus-tasks">Weekly Bonus Tasks:</label>
-                <input type="number" id="bonus-tasks">
-
-                <button type="button" id="goal-btn">
-                    Calculate Goal
-                </button>
-
+                <label for="goal">Enter your weekly goal:</label>
+                <input type="text" id="goal" name="goal">
+                <button type="submit">Submit Goal</button>
             </form>
 
-            <p id="goal-message"></p>
+            <div id="goal-result"></div>
+        </section>
+
+        <!-- Task Manager Section -->
+        <section>
+            <h2>Task Manager</h2>
+
+            <form id="task-form">
+                <label for="task-input">Enter a task:</label>
+                <input type="text" id="task-input" name="task-input">
+                <button type="submit">Add Task</button>
+            </form>
+
+            <ul id="task-list"></ul>
+        </section>
+
+        <div class="row">
+
+            <!-- Metric Converter -->
+            <div class="col" id="metric-converter">
+
+                <h2 class="heading">Metric Converter</h2>
+
+                <form id="converter-form">
+
+                    <label for="conversion-type">Choose a conversion:</label>
+
+                    <select id="conversion-type">
+                        <option value="miles-kilometers">
+                            Miles to Kilometers
+                        </option>
+
+                        <option value="kilometers-miles">
+                            Kilometers to Miles
+                        </option>
+
+                        <option value="pounds-kilograms">
+                            Pounds to Kilograms
+                        </option>
+
+                        <option value="kilograms-pounds">
+                            Kilograms to Pounds
+                        </option>
+
+                        <option value="fahrenheit-celsius">
+                            Fahrenheit to Celsius
+                        </option>
+
+                        <option value="celsius-fahrenheit">
+                            Celsius to Fahrenheit
+                        </option>
+                    </select>
+
+                    <br><br>
+
+                    <label for="conversion-value">
+                        Enter a value:
+                    </label>
+
+                    <input
+                        type="number"
+                        id="conversion-value"
+                        step="any"
+                    >
+
+                    <button type="submit">
+                        Convert
+                    </button>
+
+                    <button
+                        type="reset"
+                        id="clear-conversion"
+                    >
+                        Clear
+                    </button>
+
+                </form>
+
+                <div id="conversion-result"></div>
+
+            </div>
+
+
+            <!-- Magic Eight Ball -->
+            <div class="col" id="magic-eight-ball">
+
+                <script src="js/magic-eight-ball.js" defer></script>
+
+                <link
+                    rel="stylesheet"
+                    href="css/magic-eight-ball.css"
+                >
+
+                <h2 class="heading">
+                    Magic Eight Ball
+                </h2>
+
+                <form>
+
+                    <p>
+                        Type a yes/no question below, then click on the
+                        Eight Ball below to get your answer!
+                    </p>
+
+                    <input
+                        id="question"
+                        name="question"
+                        size="80"
+                    >
+
+                    <div id="magicEightBall">
+
+                        <div id="circle"></div>
+
+                        <img
+                            id="ball"
+                            src="img/magic-eight-ball.png"
+                            alt="Magic Eight Ball"
+                        >
+
+                    </div>
+
+                    <button
+                        id="reset"
+                        name="reset"
+                        type="reset"
+                    >
+                        Ask another question
+                    </button>
+
+                </form>
+
+                <br>
+
+            </div>
 
         </div>
 
+    </main>
 
-        <!-- Imperial/Metric Converter -->
-        <div class="col" id="metric-converter">
-
-            <h2>Imperial/Metric Converter</h2>
-
-            <form id="converter-form">
-
-                <label for="input-value">Value:</label>
-                <input
-                    type="number"
-                    id="input-value"
-                    step="any"
-                >
-
-                <label for="conversion-type">
-                    Conversion Type:
-                </label>
-
-                <select
-                    id="conversion-type"
-                    name="conversion-type"
-                >
-
-                    <option value="inch to centimeter">
-                        Inch to Centimeter
-                    </option>
-
-                    <option value="foot to centimeter">
-                        Foot to Centimeter
-                    </option>
-
-                    <option value="yard to meter">
-                        Yard to Meter
-                    </option>
-
-                    <option value="mile to kilometer">
-                        Mile to Kilometer
-                    </option>
-
-                    <option value="centimeter to inch">
-                        Centimeter to Inch
-                    </option>
-
-                    <option value="centimeter to foot">
-                        Centimeter to Foot
-                    </option>
-
-                    <option value="meter to yard">
-                        Meter to Yard
-                    </option>
-
-                    <option value="kilometer to mile">
-                        Kilometer to Mile
-                    </option>
-
-                </select>
-
-                <button type="button" id="convert-btn">
-                    Convert
-                </button>
-
-            </form>
-
-            <!-- Conversion results appear here -->
-            <div id="conversion-result"></div>
-
-        </div>
-
-    </div>
 
     <!-- External JavaScript Files -->
     <script src="js/task-manager.js"></script>
