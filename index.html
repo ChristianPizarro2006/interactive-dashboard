@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Interactive Productivity Dashboard</title>
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/magic-eight-ball.css">
 </head>
 
 <body>
@@ -24,38 +26,76 @@
 
             <form id="goal-form">
                 <label for="goal">Enter your weekly goal:</label>
-                <input type="text" id="goal" name="goal">
-                <button type="submit">Submit Goal</button>
+
+                <input
+                    type="text"
+                    id="goal"
+                    name="goal"
+                >
+
+                <button type="submit">
+                    Submit Goal
+                </button>
             </form>
 
             <div id="goal-result"></div>
         </section>
 
+
         <!-- Task Manager Section -->
-        <section>
-            <h2>Task Manager</h2>
+        <section id="weekly-tasks">
 
-            <form id="task-form">
-                <label for="task-input">Enter a task:</label>
-                <input type="text" id="task-input" name="task-input">
-                <button type="submit">Add Task</button>
-            </form>
+            <div id="task-list">
 
-            <ul id="task-list"></ul>
+                <h3>Weekly Task List</h3>
+
+                <p>
+                    Enter a task below to manage your goals.
+                </p>
+
+                <form id="task-form">
+
+                    <label for="task-name">
+                        Enter task:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="task-name"
+                        name="task-name"
+                    >
+
+                    <button
+                        type="button"
+                        id="add-task"
+                    >
+                        Add Task
+                    </button>
+
+                </form>
+
+            </div>
+
         </section>
+
 
         <div class="row">
 
             <!-- Metric Converter -->
             <div class="col" id="metric-converter">
 
-                <h2 class="heading">Metric Converter</h2>
+                <h2 class="heading">
+                    Metric Converter
+                </h2>
 
                 <form id="converter-form">
 
-                    <label for="conversion-type">Choose a conversion:</label>
+                    <label for="conversion-type">
+                        Choose a conversion:
+                    </label>
 
                     <select id="conversion-type">
+
                         <option value="miles-kilometers">
                             Miles to Kilometers
                         </option>
@@ -79,6 +119,7 @@
                         <option value="celsius-fahrenheit">
                             Celsius to Fahrenheit
                         </option>
+
                     </select>
 
                     <br><br>
@@ -113,13 +154,6 @@
 
             <!-- Magic Eight Ball -->
             <div class="col" id="magic-eight-ball">
-
-                <script src="js/magic-eight-ball.js" defer></script>
-
-                <link
-                    rel="stylesheet"
-                    href="css/magic-eight-ball.css"
-                >
 
                 <h2 class="heading">
                     Magic Eight Ball
@@ -172,6 +206,7 @@
     <!-- External JavaScript Files -->
     <script src="js/task-manager.js"></script>
     <script src="js/metric-converter.js"></script>
+    <script src="js/magic-eight-ball.js"></script>
 
 </body>
 
