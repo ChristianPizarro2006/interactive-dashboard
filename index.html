@@ -4,11 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Interactive Productivity Dashboard</title>
 
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="css/magic-eight-ball.css">
 </head>
 
 <body>
@@ -26,12 +24,7 @@
 
             <form id="goal-form">
                 <label for="goal">Enter your weekly goal:</label>
-
-                <input
-                    type="text"
-                    id="goal"
-                    name="goal"
-                >
+                <input type="text" id="goal" name="goal">
 
                 <button type="submit">
                     Submit Goal
@@ -43,15 +36,12 @@
 
 
         <!-- Task Manager Section -->
-        <section id="weekly-tasks">
-
+        <section>
             <div id="task-list">
 
-                <h3>Weekly Task List</h3>
+                <h2>Weekly Task List</h2>
 
-                <p>
-                    Enter a task below to manage your goals.
-                </p>
+                <p>Enter a task below to manage your goals.</p>
 
                 <form id="task-form">
 
@@ -66,7 +56,7 @@
                     >
 
                     <button
-                        type="button"
+                        type="submit"
                         id="add-task"
                     >
                         Add Task
@@ -75,7 +65,6 @@
                 </form>
 
             </div>
-
         </section>
 
 
@@ -155,6 +144,16 @@
             <!-- Magic Eight Ball -->
             <div class="col" id="magic-eight-ball">
 
+                <script
+                    src="js/magic-eight-ball.js"
+                    defer>
+                </script>
+
+                <link
+                    rel="stylesheet"
+                    href="css/magic-eight-ball.css"
+                >
+
                 <h2 class="heading">
                     Magic Eight Ball
                 </h2>
@@ -206,7 +205,6 @@
     <!-- External JavaScript Files -->
     <script src="js/task-manager.js"></script>
     <script src="js/metric-converter.js"></script>
-    <script src="js/magic-eight-ball.js"></script>
 
 </body>
 

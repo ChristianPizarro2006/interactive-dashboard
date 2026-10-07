@@ -13,22 +13,20 @@ taskListContainer.appendChild(taskList);
 // Create an array to store tasks
 let myTasks = [];
 
-// Get the task input, Add Task button, and form
-const taskInput = document.getElementById("task-name");
-const addTaskButton = document.getElementById("add-task");
+// Get the task form and task input
 const taskForm = document.getElementById("task-form");
+const taskInput = document.getElementById("task-name");
 
-// Prevent the form from refreshing the page
+// Run when the task form is submitted
 taskForm.addEventListener("submit", function (event) {
+
+    // Prevent the page from refreshing
     event.preventDefault();
-});
 
-// Add a task when the Add Task button is clicked
-addTaskButton.addEventListener("click", function () {
-
-    // Capture and store the task
+    // Get the task entered by the user
     const task = taskInput.value.trim();
 
+    // Make sure the task is not empty
     if (task !== "") {
 
         // Add the task to the array
