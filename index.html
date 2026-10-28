@@ -45,34 +45,89 @@
         <!-- Task Manager Section -->
         <section id="weekly-tasks">
 
-            <div id="task-list">
+            <h2>Task Manager</h2>
 
-                <h3>Weekly Task List</h3>
+            <p>
+                Add tasks, set priorities, mark important tasks,
+                and track your progress.
+            </p>
 
-                <p>
-                    Enter a task below to manage your goals.
-                </p>
+            <form id="task-form">
 
-                <form id="task-form">
-
+                <!-- Task Name -->
+                <div class="form-group">
                     <label for="task-name">
-                        Enter task:
+                        Enter Task:
                     </label>
 
                     <input
                         type="text"
                         id="task-name"
                         name="task-name"
+                        placeholder="Enter a new task"
+                        required
                     >
+                </div>
 
-                    <button
-                        type="button"
-                        id="add-task"
+                <!-- Task Priority -->
+                <div class="form-group">
+                    <label for="task-priority">
+                        Task Priority:
+                    </label>
+
+                    <select
+                        id="task-priority"
+                        name="task-priority"
                     >
-                        Add Task
-                    </button>
+                        <option value="High">High</option>
+                        <option value="Medium" selected>Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </div>
 
-                </form>
+                <!-- Important Task Checkbox -->
+                <div class="form-group">
+
+                    <label for="task-important">
+                        <input
+                            type="checkbox"
+                            id="task-important"
+                            name="task-important"
+                        >
+
+                        Mark as Important
+                    </label>
+
+                </div>
+
+                <!-- Add Task Button -->
+                <button
+                    type="submit"
+                    id="add-task"
+                >
+                    Add Task
+                </button>
+
+                <!-- Delete Entire List Button -->
+                <button
+                    type="button"
+                    id="delete-list"
+                >
+                    Delete List
+                </button>
+
+            </form>
+
+            <!-- Dynamic Task Display -->
+            <div class="task-container">
+
+                <h3>Weekly Task List</h3>
+
+                <p>
+                    Your tasks will appear below.
+                </p>
+
+                <div id="task-list"></div>
 
             </div>
 
