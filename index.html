@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,8 +8,13 @@
 
     <title>Interactive Productivity Dashboard</title>
 
+    <!-- CSS Files -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="css/magic-eight-ball.css">
+    <link rel="stylesheet" href="css/digital-clock.css">
+
+    <!-- Digital Clock JavaScript -->
+    <script src="js/digital-clock.js" defer></script>
 </head>
 
 <body>
@@ -250,6 +256,24 @@
                 </form>
 
                 <br>
+
+            </div>
+
+        </div>
+
+
+        <!-- Real-Time Digital Clock and Calendar -->
+        <div class="row">
+
+            <div class="col" id="digital-clock">
+
+                <h3>Current Time &amp; Date</h3>
+
+                <!-- Current Time -->
+                <p id="clock-face">00:00:00 AM</p>
+
+                <!-- Current Date -->
+                <p id="calendar-date">Loading date...</p>
 
             </div>
 
